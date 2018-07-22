@@ -11,4 +11,16 @@ ghc-options:
 - -Wredundant-constraints
 - -Wtabs
 
-library: {}
+library:
+  source-dirs: src
+  
+executables:
+  mkdoc:
+    main: app/MkDoc.hs
+    dependencies:
+      - lucid
+      - mmark
+      - mmark-ext
+    ghc-options:
+      - -threaded
+      - -rtsopts
